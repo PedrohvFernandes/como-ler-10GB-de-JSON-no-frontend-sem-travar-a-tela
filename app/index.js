@@ -74,7 +74,7 @@ function parseNDJOSN() {
       // Convertemos cada linha para JSON, e não JSON string, que é o que o server nos retorna
       items.slice(0, -1).forEach(item => controller.enqueue(JSON.parse(item)))
 
-      // Aqui eu pego os que não foram convertidos para JSON, e os deixo na variavel ndjsonBuffer, para que no proximo chunk, ele possa ser convertido
+      // Aqui eu pego os que não foram convertidos para JSON, e os deixo na variavel ndjsonBuffer, para que no proximo chunk, ele possa ser convertido. Ou melhor dizendo, essa linha de código atribui à variável "ndjsonBuffer" o valor do último elemento do array "items". Assumindo que "items" seja um array de objetos NDJSON (Newline Delimited JSON), a variável "ndjsonBuffer" armazenará o último objeto do array no formato de buffer, que pode ser usado posteriormente em operações de leitura/gravação em arquivos, por exemplo.
       ndjsonBuffer = items[items.length - 1]
     },
     // O flush é para verificar antes de encerrar o processamento se aqui ainda tenha algo para processar ainda/que ficou parado, nos processamos no final
