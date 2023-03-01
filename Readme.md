@@ -25,7 +25,10 @@ A streams deixa o dado/linha de tal arquivo/database na memoria e depois retira 
   - Csvtojson
 
 - Front-end: Libs nativas do JS
-
+ - fetch
+ - TextDecoderStream
+ - WritableStream
+ - AbortController
 
 - Front-end:
  - http-server (para rodar o front-end localmente)
